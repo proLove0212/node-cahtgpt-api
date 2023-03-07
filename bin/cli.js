@@ -168,7 +168,7 @@ async function onMessage(message) {
             ...conversationData,
             onProgress: (token) => {
                 reply += token;
-                const output = tryBoxen(`${reply}█`, { title: aiLabel, padding: 0.7, margin: 1, dimBorder: true });
+                const output = tryBoxen(`${reply.trim()}█`, { title: aiLabel, padding: 0.7, margin: 1, dimBorder: true });
                 spinner.text = `${spinnerPrefix}\n${output}`;
             },
         });
